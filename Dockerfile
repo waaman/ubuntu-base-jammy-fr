@@ -15,7 +15,7 @@ ENTRYPOINT ["/init"]
 RUN mkdir "${APP_DIR}"
 
 # Configure timezone
-RUN echo "Europe/Paris" > /etc/timezone
+#RUN echo "Europe/Paris" > /etc/timezone
 
 # create user
 RUN useradd -u 99 -U -d "${CONFIG_DIR}" -s /bin/false ubuntu && usermod -G users ubuntu
